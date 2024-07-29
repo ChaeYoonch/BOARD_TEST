@@ -12,8 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @Data
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor @AllArgsConstructor
 public class Board {
 
     @Id @GeneratedValue
