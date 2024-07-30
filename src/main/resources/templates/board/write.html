@@ -6,7 +6,7 @@
     </head>
     <body>
     <h1 th:text="${board.id} != null ? '글 수정하기' : '글쓰기'">글쓰기</h1>
-    <form method="post" autocomplete="off" th:object="${board}" th:action="@{/board/save}">
+    <form method="post" th:action="@{/board/save}" th:object="${board}" autocomplete="off">
         <dl>
             <dt>글 제목</dt>
             <dd>
