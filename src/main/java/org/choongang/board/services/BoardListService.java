@@ -14,10 +14,12 @@ import java.util.List;
 public class BoardListService {
     private final BoardRepository boardRepository;
 
+    // 전체 게시글 목록 가져오기
     public List<Board> getBoard() {
         return boardRepository.findAll();
     }
 
+    // 게시글 1개 가져오기
     public Board getBoards(Long id) {
         return boardRepository.findById(id).orElse(null);
     }
