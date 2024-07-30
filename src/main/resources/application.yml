@@ -1,35 +1,35 @@
 server:
   port: 3000
 
-# ??? ??? ??
 spring:
+  # 데이터 베이스 설정
   datasource:
-    driver-class-name: oracle.jdbc.driver.OracleDriver
+    driverClassName: oracle.jdbc.driver.OracleDriver
     url: jdbc:oracle:thin:@${db.host}:${db.port}:XE
-    username: ${db.username} # ?? ??? ??
-    password: ${db.password} # ?? ??? ??
+    username: ${db.username} # 환경 변수로 설정
+    password: ${db.password} # 환경 변수로 설정
 
-  # JPA ??
+  # JPA 설정
   jpa:
     properties:
       hibernate:
         show_sql: true
-        format_sql: true # ? ?? ??? ???
-        use_sql_comments: true # ??
+        format_sql: true # 한 줄로 나오지 않도록
+        use_sql_comments: true # 설명
     hibernate:
-      ddlAuto: update # ddl-auto ? ?? create -> update
+      ddlAuto: update # ddl-auto 와 동일 create -> update
 
-  # ??? ??? ??
-  devtools:
-    livereload:
-      enabled: true # ?? ?? ??? false ? ???? ?!
+    # 라이브 리로드 설정
+    devtools:
+      livereload:
+        enabled: true # 실제 배포 서버는 false 로 설정해야 함!
 
-  # ?? ?? ?? ?? (CSS, JS, ???) - static ??? ??
-  web:
-    resources:
-      staticLocations: file:src/main/resources/static
+    # 정적 자원 경로 설정 (CSS, JS, 이미지) - static 경로로 설정
+    web:
+      resources:
+        staticLocations: file:src/main/resources/static # static-locations 와 동일
 
-# ?? ??
+# 로거 설정
 logging:
   level:
     org.hibernate.type: trace
