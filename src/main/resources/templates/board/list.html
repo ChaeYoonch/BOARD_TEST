@@ -11,6 +11,7 @@
             <tr>
                 <th>ID</th>
                 <th>제목</th>
+                <th>내용</th>
             </tr>
             <div>
                 <a th:href="@{/board/write}">글쓰기</a>
@@ -18,10 +19,11 @@
             </thead>
             <tbody>
             <tr th:each="board : ${board}">
-                <td th:text="${board.id}"></td>
+                <td th:text="${board.id}"></td> <!-- ID -->
                 <td>
-                    <a th:href="@{/board/board/{id}(id=${board.id})}" th:text="${board.title}"></a>
+                    <a th:href="@{/board/board/{id}(id=${board.id})}" th:text="${board.title}"></a> <!-- 제목 -->
                 </td>
+                <td th:text="${board.content}"></td> <!-- 내용 -->
             </tr>
             </tbody>
         </table>
