@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1 th:text="#{게시글_제목}"></h1>
-        <p th:text="#{게시글_내용}"></p>
+        <p th:text="${board.content}">게시글 내용</p>
         <a href="/board/list">게시글 목록</a>
         <a href="/board/write">게시글 쓰기</a>
         <a th:href="@{/board/write/{id}(id=${board.id})}">게시글 수정하기</a>
