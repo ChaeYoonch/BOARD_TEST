@@ -68,7 +68,11 @@ public class BoardController {
     // 게시글 저장
     @PostMapping("/save")
     public String saveBoard(@ModelAttribute Board board) {
-        boardSaveService.save(board); // BoardSaveService 연동
+        if (board.getId() != null && boardListService.getBoards(board.getId()) != null) {
+            boardSaveService.save(board); // BoardSaveService 연동
+        } else {
+            boardSaveService.save(board); // BoardSaveService 연동
+        }
 
         return "redirect:/board/list";
     }
