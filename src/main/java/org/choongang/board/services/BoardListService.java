@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 @Transactional
-public class BoardInfoService {
+public class BoardListService {
     private final BoardRepository boardRepository;
 
     public List<Board> getBoard() {
