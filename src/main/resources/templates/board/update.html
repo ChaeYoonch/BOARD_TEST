@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>글 수정</title>
+    </head>
+    <body>
+        <h1>글 수정</h1>
+        <form method="post" autocomplete="off" th:object="${board}" th:action="@{/board/save}">
+            <dl>
+                <dt>글 제목</dt>
+                <dd>
+                    <input type="text" name="title" th:field="*{title}">
+                </dd>
+            </dl>
+            <dl>
+                <dt>내용</dt>
+                <dd>
+                    <textarea name="content" th:field="*{content}"></textarea>
+                </dd>
+            </dl>
+            <button type="submit">수정 완료</button>
+        </form>
+    </body>
+</html>
