@@ -20,7 +20,18 @@ public class BoardController {
 
     private final BoardRepository boardRepository;
 
-    // 게시글 목록 조회
+    /* main.html : 게시글 메인 | list.html : 게시글 목록 | write.html : 게시글 등록 | update.html : 게시글 수정 | delete.html : 게시글 삭제 */
+
+    // 게시글 목록
+    @GetMapping("/list")
+    public String list(Model model) {
+        List<Board> board = boardRepository.findAll();
+        model.addAttribute("board", board);
+
+        return "board/list";
+    }
+
+    // 게시글 메인
     @GetMapping("/main")
     public String main(Model model) {
         List<Board> board = boardRepository.findAll();
