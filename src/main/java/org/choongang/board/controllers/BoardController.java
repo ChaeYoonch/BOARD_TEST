@@ -48,6 +48,11 @@ public class BoardController {
         return "board/write";
     }
 
+    /* @GetMapping("/write")
+    public String write(@ModelAttribute RequestBoard form) {
+        return "board/write";
+    } */
+
     // 게시글 수정
     @GetMapping("/update/{id}")
     public String changeBoard(@PathVariable("id") Long id, Model model) {
@@ -58,7 +63,7 @@ public class BoardController {
     }
 
     // 게시글 삭제
-    @PostMapping("/delete/{id}")
+    @GetMapping("/delete/{id}")
     public String deleteBoard(@PathVariable("id") Long id, Model model) {
         boardDeleteService.delete(id); // BoardDeleteService 연동
 
@@ -76,4 +81,20 @@ public class BoardController {
 
         return "redirect:/board/list";
     }
+
+    /*@PostMapping("/save")
+    public String save(@Valid RequestBoard form, Errors errors) {
+        String mode = form.getId() == null ? "update" : "write";
+        if (errors.hasErrors()) {
+            return "board/";
+        }
+        return "redirect:board/list";
+    } */
+
+    /* @GetMapping("/main/{id}")
+    public String mainBoard(@PathVariable("id") Long id, Model model) {
+        Board data = boardListService.get(id);
+
+        return "board/main";
+    } */
 }
