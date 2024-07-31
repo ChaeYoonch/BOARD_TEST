@@ -1,0 +1,57 @@
+/* 기본 설정 */
+body {
+    font-family: "Gasoek One", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #e7f3ff; /* 배경 색상 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 중앙 배치 */
+}
+
+/* 제목 */
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* 게시글 내용 */
+p {
+    font-size: 1.2em;
+    color: #555;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+/* 링크 */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #e7f3ff;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-color: #cde7ff;
+    color: #0056b3;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    gap: 10px; /* 링크 간격 */
+    flex-wrap: wrap;
+}
