@@ -1,0 +1,56 @@
+body {
+    font-family: "Gasoek One", sans-serif;
+    font-size: 15px;
+    text-align: center; /* 정중앙 배치 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 수평 정렬 */
+    justify-content: center; /* 수직 정렬 */
+    min-height: 100vh;
+    background-color: #f9f9f9; /* 배경 색상 */
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #FAF7F1; /* 테이블 배경 색상 */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center; /* 중앙 정렬 */
+}
+
+th {
+    background-color: #8FD8D8; /* #A6DCFE; */ /* #B1CCC5; */ /* #f2f2f2; */
+    font-weight: bold;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 4px;
+    background-color: #e7f3ff; /* 링크 배경 색상 */
+}
+
+a:hover {
+    text-decoration: underline;
+    background-color: #cde7ff; /* 커서 -> 배경 색상 */
+}
+
+div {
+    margin-top: 20px;
+}
