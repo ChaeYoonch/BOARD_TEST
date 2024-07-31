@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
+        <link rel="stylesheet" href="/css/list.css">
         <meta charset="UTF-8">
         <title th:text="${board.title}"></title>
     </head>
     <body>
         <h1 th:text="#{게시글_제목}"></h1>
         <p th:text="${board.content}">게시글 내용</p>
-        <a href="/board/list">게시글 목록</a>
-        <a href="/board/write">게시글 쓰기</a>
-        <a th:href="@{/board/update/{id}(id=${board.id})}">게시글 수정하기</a>
-        <a th:href="@{/board/delete/{id}(id=${board.id})}">게시글 삭제하기</a>
+        <div class="link-container">
+            <a href="/board/list">게시글 목록</a>
+            <a href="/board/write">게시글 쓰기</a>
+            <a th:href="@{/board/update/{id}(id=${board.id})}">게시글 수정하기</a>
+            <a th:href="@{/board/delete/{id}(id=${board.id})}">게시글 삭제하기</a>
+        </div>
     </body>
 </html>
